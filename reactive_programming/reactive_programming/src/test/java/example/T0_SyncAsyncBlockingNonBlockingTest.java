@@ -1,4 +1,4 @@
-package example.blocking;
+package example;
 
 
 import java.util.concurrent.Callable;
@@ -12,7 +12,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @Slf4j
-class SyncAsyncBlockingNonBlockingTest {
+class T0_SyncAsyncBlockingNonBlockingTest {
 
     static class A {
 

@@ -1,4 +1,4 @@
-package example.blocking;
+package example;
 
 import java.util.function.Consumer;
 import lombok.extern.slf4j.Slf4j;
