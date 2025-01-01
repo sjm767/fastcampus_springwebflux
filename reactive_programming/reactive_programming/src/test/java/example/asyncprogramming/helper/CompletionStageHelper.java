@@ -1,4 +1,4 @@
-package example.helper;
+package example.asyncprogramming.helper;
 
 import lombok.extern.slf4j.Slf4j;
 

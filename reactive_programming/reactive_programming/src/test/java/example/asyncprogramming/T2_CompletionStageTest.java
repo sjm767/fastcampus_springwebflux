@@ -1,11 +1,10 @@
-package example;
+package example.asyncprogramming;
 
-import example.helper.CompletionStageHelper;
+import example.asyncprogramming.helper.CompletionStageHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
 /**

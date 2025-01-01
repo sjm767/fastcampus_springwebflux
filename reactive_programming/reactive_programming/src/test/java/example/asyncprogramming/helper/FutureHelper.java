@@ -1,4 +1,4 @@
-package example.helper;
+package example.asyncprogramming.helper;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

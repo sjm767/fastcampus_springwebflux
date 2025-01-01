@@ -1,7 +1,7 @@
-package example;
+package example.asyncprogramming;
 
 
-import example.helper.FutureHelper;
+import example.asyncprogramming.helper.FutureHelper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
