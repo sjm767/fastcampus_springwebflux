@@ -13,7 +13,7 @@ public class SocketInputStreamExample {
 
     public static void main(String[] args) {
         try {
-            // 서버 소켓 생성
+            // 서버 소켓 생성 & Bind
             ServerSocket serverSocket = new ServerSocket(8080);
 
             // 클라이언트 접속 대기
