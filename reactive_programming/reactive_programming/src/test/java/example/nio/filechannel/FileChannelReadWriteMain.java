@@ -15,7 +15,6 @@ public class FileChannelReadWriteMain {
 
     public static void main(String[] args) {
 
-
         // READ
         File file = new File(Objects.requireNonNull(FileChannelReadWriteMain.class
                 .getClassLoader()
@@ -41,8 +40,10 @@ public class FileChannelReadWriteMain {
                 .getResource("file-channel-write.txt"))
             .getFile());
 
-        try (FileChannel writeFileChannel = FileChannel.open(writeFile.toPath(), StandardOpenOption.WRITE)) {
-            ByteBuffer writeBuffer = ByteBuffer.wrap("Hello World".getBytes(StandardCharsets.UTF_8));
+        try (FileChannel writeFileChannel = FileChannel.open(writeFile.toPath(),
+            StandardOpenOption.WRITE)) {
+            ByteBuffer writeBuffer = ByteBuffer.wrap(
+                "Hello World".getBytes(StandardCharsets.UTF_8));
             writeFileChannel.write(writeBuffer);
 
         } catch (IOException e) {

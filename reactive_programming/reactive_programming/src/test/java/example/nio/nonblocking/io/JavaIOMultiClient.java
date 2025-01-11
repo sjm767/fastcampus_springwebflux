@@ -15,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class JavaIOMultiClient {
+
     private static ExecutorService executorService = Executors.newFixedThreadPool(50);
 
     public static void main(String[] args) {

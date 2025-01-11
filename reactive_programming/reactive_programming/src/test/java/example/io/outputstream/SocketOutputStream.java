@@ -10,6 +10,7 @@ import java.net.Socket;
 
 @Slf4j
 public class SocketOutputStream {
+
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(8080);
@@ -29,7 +30,6 @@ public class SocketOutputStream {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
 
 
     }

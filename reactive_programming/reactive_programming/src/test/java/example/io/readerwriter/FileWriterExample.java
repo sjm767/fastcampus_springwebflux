@@ -7,11 +7,12 @@ import java.nio.charset.StandardCharsets;
 
 @Slf4j
 public class FileWriterExample {
+
     public static void main(String[] args) {
         File file = new File(FileWriterExample.class
-                .getClassLoader()
-                .getResource("koreanhello.txt")
-                .getFile());
+            .getClassLoader()
+            .getResource("koreanhello.txt")
+            .getFile());
 
         var charset = StandardCharsets.UTF_8;
         try (FileWriter fileWriter = new FileWriter(file)) {

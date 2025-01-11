@@ -26,7 +26,6 @@ public class JavaNIOClient {
             socketChannel.write(
                 ByteBuffer.wrap(("This is Client").getBytes(StandardCharsets.UTF_8)));
 
-
             // 서버로부터 response 수신
             ByteBuffer buffer = ByteBuffer.allocate(1024);
             socketChannel.read(buffer);

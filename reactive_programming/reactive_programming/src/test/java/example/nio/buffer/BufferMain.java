@@ -1,6 +1,5 @@
 package example.nio.buffer;
 
-import example.io.inputstream.FIleInputStreamExample;
 import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -61,7 +60,8 @@ public class BufferMain {
     }
 
     public static void logPosition(String msg, ByteBuffer byteBuffer) {
-        log.info("{}, position: {}, limit: {}, capacity: {}", msg, byteBuffer.position(), byteBuffer.limit(), byteBuffer.capacity());
+        log.info("{}, position: {}, limit: {}, capacity: {}", msg, byteBuffer.position(),
+            byteBuffer.limit(), byteBuffer.capacity());
     }
 
 }

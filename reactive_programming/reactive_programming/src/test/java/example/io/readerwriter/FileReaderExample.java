@@ -10,11 +10,12 @@ import java.nio.charset.StandardCharsets;
 
 @Slf4j
 public class FileReaderExample {
+
     public static void main(String[] args) {
         File file = new File(FileReaderExample.class
-                .getClassLoader()
-                .getResource("koreanhello.txt")
-                .getFile());
+            .getClassLoader()
+            .getResource("koreanhello.txt")
+            .getFile());
 
         var charset = StandardCharsets.UTF_8;
         try (FileReader fileReader = new FileReader(file)) {

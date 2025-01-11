@@ -17,9 +17,9 @@ class NonBlockingSocketChannelTest {
     @DisplayName("ServerSocketChannel에서 논블로킹 설정 시 accept에서 블로킹되지 않는다.")
     void testNonBlockingServerSocketChannel() throws IOException {
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
-            serverSocketChannel.configureBlocking(false); // Non-Blocking 설정
-            InetSocketAddress address = new InetSocketAddress("localhost", 8080);
-            serverSocketChannel.bind(address);
+        serverSocketChannel.configureBlocking(false); // Non-Blocking 설정
+        InetSocketAddress address = new InetSocketAddress("localhost", 8080);
+        serverSocketChannel.bind(address);
 
         SocketChannel clientSocket = serverSocketChannel.accept();
         assertThat(clientSocket).isNull(); // accept에서 블로킹 되지 않기 때문에 null이 반환된다.

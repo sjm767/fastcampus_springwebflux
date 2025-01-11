@@ -7,11 +7,12 @@ import java.util.Objects;
 
 @Slf4j
 public class BufferedInputStreamExample {
+
     public static void main(String[] args) {
         File file = new File(Objects.requireNonNull(FIleInputStreamExample.class
-                        .getClassLoader()
-                        .getResource("hello.txt"))
-                .getFile());
+                .getClassLoader()
+                .getResource("hello.txt"))
+            .getFile());
 
         try (var fis = new FileInputStream(file)) {
             try (var bis = new BufferedInputStream(fis)) {

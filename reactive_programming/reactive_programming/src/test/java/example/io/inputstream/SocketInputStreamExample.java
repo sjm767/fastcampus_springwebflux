@@ -18,7 +18,7 @@ public class SocketInputStreamExample {
 
             // 클라이언트 접속 대기
             Socket clientSocket = serverSocket.accept();
-            
+
             // InputStream 획득
             InputStream inputStream = clientSocket.getInputStream();
 

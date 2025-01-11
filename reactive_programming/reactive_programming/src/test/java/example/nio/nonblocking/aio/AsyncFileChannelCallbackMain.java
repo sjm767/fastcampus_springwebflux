@@ -20,7 +20,7 @@ public class AsyncFileChannelCallbackMain {
                 .getResource("aio-file-channel.txt"))
             .getFile());
 
-        try (AsynchronousFileChannel fileChannel = AsynchronousFileChannel.open(file.toPath())){
+        try (AsynchronousFileChannel fileChannel = AsynchronousFileChannel.open(file.toPath())) {
             ByteBuffer buffer = ByteBuffer.allocate(1024);
 
             fileChannel.read(buffer, 0, null, new CompletionHandler<Integer, Object>() {

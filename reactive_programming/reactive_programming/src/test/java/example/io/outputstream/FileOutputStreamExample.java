@@ -9,11 +9,12 @@ import java.io.IOException;
 
 @Slf4j
 public class FileOutputStreamExample {
+
     public static void main(String[] args) {
         File file = new File(FileOutputStreamExample.class
-                .getClassLoader()
-                .getResource("output.txt")
-                .getFile());
+            .getClassLoader()
+            .getResource("output.txt")
+            .getFile());
 
         try (FileOutputStream fos = new FileOutputStream(file)) {
             String content = "hello world";

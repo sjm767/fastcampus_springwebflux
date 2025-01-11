@@ -27,6 +27,7 @@ class T0_SyncAsyncBlockingNonBlockingTest {
     }
 
     static class B {
+
         static int getResult(Integer num, Function<Integer, Integer> fc) {
             try {
                 Thread.sleep(1000);
@@ -71,7 +72,7 @@ class T0_SyncAsyncBlockingNonBlockingTest {
         });
 
         int counter = 0;
-        while(!future.isDone()) {
+        while (!future.isDone()) {
             counter++;
             log.info("작업이 완료되는 동안 다른 작업 중.., {}", counter);
             try {

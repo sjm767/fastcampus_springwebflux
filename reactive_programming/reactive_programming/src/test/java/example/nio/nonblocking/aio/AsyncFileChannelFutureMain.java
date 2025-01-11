@@ -19,12 +19,12 @@ public class AsyncFileChannelFutureMain {
                 .getResource("aio-file-channel.txt"))
             .getFile());
 
-        try (AsynchronousFileChannel fileChannel = AsynchronousFileChannel.open(file.toPath())){
+        try (AsynchronousFileChannel fileChannel = AsynchronousFileChannel.open(file.toPath())) {
             ByteBuffer buffer = ByteBuffer.allocate(1024);
 
             Future<Integer> future = fileChannel.read(buffer, 0);
 
-            while (!future.isDone()){
+            while (!future.isDone()) {
                 log.info("reading...");
             }
 
