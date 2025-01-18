@@ -7,6 +7,7 @@ import java.nio.CharBuffer;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -37,11 +38,14 @@ public class JavaNIONonBlockingServer {
         }
     }
 
+    @SneakyThrows
     private static void handleRequest(SocketChannel clientSocketChannel) throws IOException {
         ByteBuffer buffer = ByteBuffer.allocate(1024);
         while (clientSocketChannel.read(buffer) == 0) {
             log.info("Reading...");
         }
+
+//        Thread.sleep(10);
 
         buffer.flip();
         CharBuffer responseResult = StandardCharsets.UTF_8.decode(buffer);

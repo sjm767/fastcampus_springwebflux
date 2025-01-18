@@ -10,6 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -42,12 +43,14 @@ public class JavaNIONonBlockingMultiServer {
         }
     }
 
+    @SneakyThrows
     private static void handleRequest(SocketChannel clientSocketChannel) {
         ByteBuffer buffer = ByteBuffer.allocate(1024);
         try {
             while (clientSocketChannel.read(buffer) == 0) {
                 log.info("Reading...");
             }
+            Thread.sleep(10);
 
             buffer.flip();
             CharBuffer responseResult = StandardCharsets.UTF_8.decode(buffer);
